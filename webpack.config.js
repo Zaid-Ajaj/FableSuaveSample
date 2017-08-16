@@ -25,7 +25,13 @@ module.exports = {
   },
   devServer: {
     contentBase: resolve('./FableSuaveSample.Server/client'),
-    port: 8080
+    port: 8081,
+    proxy: {
+      '/api/*': { // tell webpack-dev-server to re-route all requests from client to the server
+        target: "http://localhost:8080",// assuming the suave server is hosted op port 8083
+        changeOrigin: true
+    }
+  },
   },
   module: {
     rules: [
@@ -49,4 +55,4 @@ module.exports = {
       }
     ]
   }
-};
+}

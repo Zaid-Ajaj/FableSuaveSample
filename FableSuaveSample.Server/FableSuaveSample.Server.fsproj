@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="SharedTypes.fs" />
+    <Compile Include="ServerImpl.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>

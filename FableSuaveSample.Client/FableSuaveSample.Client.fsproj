@@ -3,11 +3,9 @@
     <TargetFramework>netstandard1.6</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\FableSuaveSample.Server\SharedTypes.fs" />
     <Compile Include="QUnit.fs" />
     <Compile Include="App.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Fable.Parsimmon\Fable.Parsimmon.fsproj" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

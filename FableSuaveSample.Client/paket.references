@@ -3,3 +3,4 @@ Fable.Core
 Fable.Import.Browser
 dotnet-fable
 FSharp.NET.Sdk
+Fable.Remoting.Client

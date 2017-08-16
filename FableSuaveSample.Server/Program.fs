@@ -1,7 +1,12 @@
-﻿// Learn more about F# at http://fsharp.org
-// See the 'F# Tutorial' project for more help.
+﻿open Suave 
+open Fable.Remoting.Suave
+open ServerImpl
+open SharedTypes
+
+let fableWebPart = FableSuaveAdapter.webPartWithBuilderFor implementation routeBuilder
 
 [<EntryPoint>]
 let main argv = 
     printfn "%A" argv
-    0 // return an integer exit code
+    startWebServer defaultConfig fableWebPart
+    0 
