@@ -47,6 +47,8 @@ type Asserter =
     /// The equal assertion uses the simple comparison operator (==) to compare the actual and expected arguments. When they are equal, the assertion passes; otherwise, it fails. When it fails, both actual and expected values are displayed in the test result, in addition to a given message.
     [<Emit("$0.equal($1, $2)")>]
     abstract equal : 'a -> 'b -> unit
+    [<Emit("$0.equal(true, $1)")>]
+    abstract ensureThat : bool -> unit
     /// The equal assertion uses the simple comparison operator (==) to compare the actual and expected arguments. When they are equal, the assertion passes; otherwise, it fails. When it fails, both actual and expected values are displayed in the test result, in addition to a given message.
     [<Emit("$0.equal($1, $2, $3)")>]
     abstract equalWithMsg : 'a -> 'b -> string -> unit 
